@@ -7,7 +7,6 @@ class DBService():
         c = connection.cursor()
         c.execute("SELECT MAX(FILM_ID) +1 FROM FILMS_MAIN")
         idMax = c.fetchone()[0]
-
         c.execute("INSERT INTO FILMS_MAIN (FILM_ID,FILM_NAME) VALUES (?,?)",(idMax,film))
         connection.commit()
         connection.close()
