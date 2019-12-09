@@ -1,5 +1,5 @@
 import sqlite3
-from main.db.DBManagement import DBService
+from main.db.DBService import DBService
 
 db = DBService()
 

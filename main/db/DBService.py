@@ -34,7 +34,7 @@ class DBService():
         connection.close()
 
     """Remove a film record from the FILMS_FAKE table"""
-    def deleteFilmFromMain(self,film):
+    def deleteFilmFromFake(self,film):
         connection = sqlite3.connect("D:\Python\Proyectos\Harpo\main\db/filmoteca.db")
         c = connection.cursor()
         c.execute("DELETE FROM FILMS_FAKE WHERE FILM_NAME = ?",(film,))
