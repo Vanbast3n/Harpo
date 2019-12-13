@@ -1,6 +1,7 @@
-import sqlite3
-from main.db.DBService import DBService
+from main.core.FolderManagement import FolderManagement
 
-db = DBService()
+fm = FolderManagement()
 
-db.addFilm("pulp fiction")
+list = fm.getMovieList()
+print(list)
+
