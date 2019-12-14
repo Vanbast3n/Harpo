@@ -30,17 +30,17 @@ class FolderManagement():
                 listWithoutMovies.append(item)
         return listWithoutMovies
 
+    """Extract all the movies in all subdirs in the root directory"""
     def getAllMoviesInTheDirectory(self, directory):
 
         movieList = self.getMovieList(directory)
         folderList = self.getFolderList(directory)
 
         if len(folderList) > 0:
-            movieList1 = []
             for item in folderList:
                 movieList1 = self.getMovieList(directory + "/" + item)
-                print(directory + "/" + item)
-                print(len(movieList1))
+                #print(directory + "/" + item)
+                #print(len(movieList1))
                 for movie in movieList1:
                     movieList.append(movie)
 
